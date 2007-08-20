@@ -55,7 +55,7 @@ rm -rf %{buildroot}
 %doc AUTHORS COPYING ChangeLog NEWS README TODO
 %attr(755,root,root) %{_bindir}/etswitch
 %{_datadir}/applications/etswitch.desktop
-%{_datadir}/man/man1/etswitch.*
+%{_mandir}/man1/etswitch.*
 %{_datadir}/pixmaps/etswitch.png
 %{_datadir}/pixmaps/etswitch.xpm
 
