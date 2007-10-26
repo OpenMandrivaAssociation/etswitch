@@ -10,6 +10,7 @@ BuildRequires:	libx11-devel
 BuildRequires:	libxmu-devel
 BuildRequires:	libxxf86vm-devel
 BuildRequires:	libxpm-devel
+BuildRequires:	desktop-file-utils
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-root 
 
 %description
