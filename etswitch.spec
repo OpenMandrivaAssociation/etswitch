@@ -1,12 +1,11 @@
 Name: 		etswitch
 Summary: 	ETSWITCH - A *nix 'minimizer' for a few games
 Version: 	0.1.14
-Release: 	%mkrel 3
-License: 	GPL
+Release: 	%mkrel 4
+License: 	GPLv2+
 Group: 		Games/Other
 Source: 	http://hem.bredband.net/b400150/etswitch/%{name}-%{PACKAGE_VERSION}.tar.gz
 Url: 		http://hem.bredband.net/b400150/
-Patch:		%{name}-menu-entry.patch
 BuildRequires:	libx11-devel
 BuildRequires:	libxmu-devel
 BuildRequires:	libxxf86vm-devel
@@ -17,14 +16,13 @@ BuildRoot: 	%{_tmppath}/%{name}-%{version}-root
 A minimizer for all OpenGL and SDL games natively supported by GNU/Linux.
 
 %prep
-%setup -q %{name}-%{version}
-
-%patch -p1 -b .%{name}-menu-entry
+%setup -q
+sed -i -e 's/^Icon=%{name}.png$/Icon=%{name}/g' %{name}.desktop.in
 
 %build
 %configure2_5x \
---enable-debug=no \
---disable-debug
+	--enable-debug=no \
+	--disable-debug
 
 %make
 	    
@@ -32,6 +30,11 @@ A minimizer for all OpenGL and SDL games natively supported by GNU/Linux.
 rm -rf %{buildroot}
 	    
 %makeinstall_std
+
+desktop-file-install \
+	--remove-category="Tool" \
+	--remove-category="Application" \
+	--dir %{buildroot}%{_datadir}/applications %{buildroot}%{_datadir}/applications/*
 	    
 %clean
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
@@ -51,12 +54,10 @@ rm -rf %{buildroot}
 %endif
 	    
 %files
-%defattr(644, root, root,755)
+%defattr(-,root,root)
 %doc AUTHORS COPYING ChangeLog NEWS README TODO
-%attr(755,root,root) %{_bindir}/etswitch
+%{_bindir}/etswitch
 %{_datadir}/applications/etswitch.desktop
 %{_mandir}/man1/etswitch.*
 %{_datadir}/pixmaps/etswitch.png
 %{_datadir}/pixmaps/etswitch.xpm
-
-
