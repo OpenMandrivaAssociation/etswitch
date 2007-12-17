@@ -11,7 +11,6 @@ BuildRequires:	libxmu-devel
 BuildRequires:	libxxf86vm-devel
 BuildRequires:	libxpm-devel
 BuildRequires:	desktop-file-utils
-BuildRoot: 	%{_tmppath}/%{name}-%{version}-root 
 
 %description
 A minimizer for all OpenGL and SDL games natively supported by GNU/Linux.
