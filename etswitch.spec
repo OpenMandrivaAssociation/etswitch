@@ -42,17 +42,13 @@ desktop-file-install \
 	    
 %post
 %{update_menus}
-%if %mdkversion >= 200700
 %{update_desktop_database}
 %update_icon_cache hicolor
-%endif
 	    
 %postun
 %{clean_menus}
-%if %mdkversion >= 200700
 %{clean_desktop_database}
 %clean_icon_cache hicolor
-%endif
 	    
 %files
 %defattr(-,root,root)
