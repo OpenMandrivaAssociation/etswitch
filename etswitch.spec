@@ -1,7 +1,7 @@
 Name: 		etswitch
 Summary: 	ETSWITCH - A *nix 'minimizer' for a few games
 Version: 	0.1.14
-Release: 	%mkrel 6
+Release: 	%mkrel 7
 License: 	GPLv2+
 Group: 		Games/Other
 Source: 	http://hem.bredband.net/b400150/etswitch/%{name}-%{PACKAGE_VERSION}.tar.gz
