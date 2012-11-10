@@ -1,0 +1,12 @@
+diff -Naur etswitch-0.1.14/src/etswitch.c etswitch-0.1.14.tpg/src/etswitch.c
+--- etswitch-0.1.14/src/etswitch.c	2006-06-04 19:34:19.000000000 +0000
++++ etswitch-0.1.14.tpg/src/etswitch.c	2010-02-14 05:07:36.000000000 +0000
+@@ -461,7 +461,7 @@
+     /* setup lock, fixme */
+     /* use temp var */
+     lock_file = "/tmp/.etswitch.pid";    /* now this isnt failsafe but at least something */
+-    lock_fd = open(lock_file, O_CREAT | O_RDWR);
++    lock_fd = open(lock_file, O_CREAT | O_RDWR, 0644);
+     if (lock_fd < 0) {
+ 	#ifdef DEBUG
+ 	fprintf(stdout, "'%s' allready exits, will try to open.\n",lock_file);
