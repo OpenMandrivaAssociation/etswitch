@@ -1,5 +1,5 @@
 Name:		etswitch
-Summary:	ETSWITCH - A *nix 'minimizer' for a few games
+Summary:	- A *nix 'minimizer' for a few games
 Version:	0.1.14
 Release:	10
 License:	GPLv2+
