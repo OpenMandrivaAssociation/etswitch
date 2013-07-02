@@ -1,7 +1,7 @@
 Name:		etswitch
-Summary:	- A *nix 'minimizer' for a few games
+Summary:	A *nix 'minimizer' for a few games
 Version:	0.1.14
-Release:	10
+Release:	11
 License:	GPLv2+
 Group:		Games/Other
 Url:		http://hem.bredband.net/b400150/
