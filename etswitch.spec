@@ -4,7 +4,7 @@ Version:	0.1.14
 Release:	12
 License:	GPLv2+
 Group:		Games/Other
-Url:		http://hem.bredband.net/b400150/
+Url:		https://hem.bredband.net/b400150/
 Source:		http://hem.bredband.net/b400150/etswitch/%{name}-%{PACKAGE_VERSION}.tar.gz
 Patch0:		etswitch-0.1.14-missing-argument-in-open.patch
 BuildRequires:	pkgconfig(x11)
