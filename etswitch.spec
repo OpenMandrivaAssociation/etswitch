@@ -7,6 +7,11 @@ Group:		Games/Other
 Url:		https://hem.bredband.net/b400150/
 Source:		http://hem.bredband.net/b400150/etswitch/%{name}-%{PACKAGE_VERSION}.tar.gz
 Patch0:		etswitch-0.1.14-missing-argument-in-open.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	pkgconfig(x11)
 BuildRequires:	pkgconfig(xmu)
 BuildRequires:	pkgconfig(xxf86vm)
